@@ -170,6 +170,8 @@ void initSysTick1ms()
 {
 	NVIC_SetPriority (SysTick_IRQn,3);  //中断优先级
 	EnableIRQ(SysTick_IRQn);
+
+
 //		TIM_ITConfig(TIM16, TIM_IT_Update, ENABLE);  //打开中断
 	if (SysTick_Config(SystemCoreClock / 1000))//1毫秒
 	{
